@@ -27,7 +27,7 @@ function Person() {
                     </Link>
                 </li>
                 <li>
-                    <Link href="https://t.me/Berillllium" target="_blank">
+                    <Link href="https://t.me/berillx2ium" target="_blank">
                         Telegram
                     </Link>
                 </li>
