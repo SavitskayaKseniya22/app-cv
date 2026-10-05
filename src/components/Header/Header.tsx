@@ -9,6 +9,7 @@ import clsx from "clsx";
 
 function Header() {
     const pathname = usePathname();
+    const isPortfolio = pathname === "/portfolio" || pathname.startsWith("/portfolio/");
 
     return (
         <header className={styles.header}>
@@ -28,12 +29,12 @@ function Header() {
                 <li className={styles.header__item}>
                     <Link
                         href="/portfolio"
-                        title="Potfolio"
+                        title="Portfolio"
                         className={clsx(styles.header__link, {
-                            [styles.header__link_active]: /^\/portfolio*/.test(pathname),
+                            [styles.header__link_active]: isPortfolio,
                         })}>
-                        <Icon icon={FolderIcon} view={/^\/portfolio*/.test(pathname) ? "accent" : "normal"} />
-                        <span className={styles.header__text}>Potfolio</span>
+                        <Icon icon={FolderIcon} view={isPortfolio ? "accent" : "normal"} />
+                        <span className={styles.header__text}>Portfolio</span>
                     </Link>
                 </li>
                 <li className={styles.header__item}>

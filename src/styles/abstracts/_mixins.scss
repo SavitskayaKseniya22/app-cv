@@ -110,7 +110,7 @@ $breakpoints: (
     laptop-s: 1024px,
     laptop-m: 1280px,
     laptop-l: 1920px,
-    laptop-xl: 2560px
+    laptop-xl: 2560px,
 );
 
 @mixin media($screen) {

@@ -8,6 +8,6 @@ export type ProjectType = {
     complexity: number;
     task?: string;
     features?: string[];
-    murkup?: string[];
+    markup?: string[];
     isItReady: boolean;
 };

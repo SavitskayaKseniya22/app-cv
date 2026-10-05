@@ -1,36 +1,36 @@
 @use "@abstracts/mixins" as mx;
 
 .person {
-  position: relative;
-  display: flex;
-  flex-shrink: 0;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0.5rem;
-  text-align: center;
-
-  & > * {
     position: relative;
-    z-index: 1;
-  }
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    text-align: center;
 
-  @include mx.media(tablet) {
-    gap: 0.5rem;
-    max-width: 220px;
-    height: 100%;
-    padding: 1rem;
-  }
+    & > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    @include mx.media(tablet) {
+        gap: 0.5rem;
+        max-width: 220px;
+        height: 100%;
+        padding: 1rem;
+    }
 }
 
 .person__image {
-  z-index: 0;
-  object-fit: cover;
-  filter: blur(0.25px) grayscale(10%);
+    z-index: 0;
+    object-fit: cover;
+    filter: blur(0.25px) grayscale(10%);
 }
 
 .person__socials {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }

@@ -1,19 +1,19 @@
 @use "@abstracts/mixins" as mx;
 
 .contacts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
 
-  @include mx.media(tablet) {
-    gap: 2rem;
-  }
+    @include mx.media(tablet) {
+        gap: 2rem;
+    }
 }
 
 .contacts__item {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 }

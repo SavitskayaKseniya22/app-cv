@@ -1,24 +1,18 @@
 {
-  "customSyntax": "postcss-scss",
-  "extends": [
-    "stylelint-config-standard-scss",
-    "stylelint-config-recess-order"
-  ],
-  "ignoreFiles": [
-    "**/node_modules/**",
-    "**/.next/**"
-  ],
-  "rules": {
-    "max-nesting-depth": 4,
-    "import-notation": "string",
-    "color-function-notation": "legacy",
-    "alpha-value-notation": "number",
-    "media-feature-range-notation": "prefix",
-    "selector-class-pattern": [
-      "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?:__(?:[a-z0-9]+(?:-[a-z0-9]+)*))*(?:_(?:[a-z0-9]+(?:-[a-z0-9]+)*))*$",
-      {
-        "message": "Use BEM with kebab-case: block-name__element-name_modifier-name"
-      }
-    ]
-  }
+    "customSyntax": "postcss-scss",
+    "extends": ["stylelint-config-standard-scss", "stylelint-config-recess-order"],
+    "ignoreFiles": ["**/node_modules/**", "**/.next/**"],
+    "rules": {
+        "max-nesting-depth": 4,
+        "import-notation": "string",
+        "color-function-notation": "legacy",
+        "alpha-value-notation": "number",
+        "media-feature-range-notation": "prefix",
+        "selector-class-pattern": [
+            "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*(?:__(?:[a-z0-9]+(?:-[a-z0-9]+)*))*(?:_(?:[a-z0-9]+(?:-[a-z0-9]+)*))*$",
+            {
+                "message": "Use BEM with kebab-case: block-name__element-name_modifier-name"
+            }
+        ]
+    }
 }

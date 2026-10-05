@@ -6,7 +6,7 @@ import Person from "@/components/person/person";
 
 export const metadata = {
     title: "CV",
-    description: 'Ksenia Savitskaia"s portfolio',
+    description: "Kseniia Savitskaia's portfolio",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

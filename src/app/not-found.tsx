@@ -9,7 +9,7 @@ function NotFound() {
     return (
         <>
             <h2>Not Found</h2>
-            <button type="button" onClick={() => router.back()}>
+            <button type="button" aria-label="Go back" onClick={() => router.back()}>
                 <Icon icon={ArrowUturnLeftIcon} view="normal" />
             </button>
         </>

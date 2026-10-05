@@ -2,48 +2,48 @@
 @use "@abstracts/variables" as vars;
 
 .occupation__chapter-title {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 .occupation__chapter {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .occupation__item {
-  padding: 1rem;
-  background-color: vars.$color-dark-sub;
+    padding: 1rem;
+    background-color: vars.$color-dark-sub;
 }
 
 .occupation__summary {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .occupation__list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 1rem;
 
-  @include mx.text-m;
+    @include mx.text-m;
 
-  li {
-    position: relative;
+    li {
+        position: relative;
 
-    &:not(:last-child)::after {
-      position: absolute;
-      bottom: -0.5rem;
-      display: block;
-      width: 100%;
-      height: 1px;
-      content: " ";
-      background-color: vars.$color-dark-sub;
+        &:not(:last-child)::after {
+            position: absolute;
+            bottom: -0.5rem;
+            display: block;
+            width: 100%;
+            height: 1px;
+            content: " ";
+            background-color: vars.$color-dark-sub;
+        }
     }
-  }
 }

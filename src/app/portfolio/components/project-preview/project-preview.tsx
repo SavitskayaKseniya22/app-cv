@@ -20,7 +20,7 @@ function ProjectPreview({ data }: { data: ProjectType }) {
                         alt={data.name}
                         unoptimized
                         placeholder="blur"
-                        blurDataURL='"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8pqT0HwAFCwIbEaevOQAAAABJRU5ErkJggg=="'
+                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8pqT0HwAFCwIbEaevOQAAAABJRU5ErkJggg=="
                     />
                 </div>
                 <div className={styles.project__decription}>
@@ -29,7 +29,7 @@ function ProjectPreview({ data }: { data: ProjectType }) {
                 </div>
 
                 {data.deploy && (
-                    <Link href={data.deploy} target="_blank" className={styles.project__button_deploy}>
+                    <Link href={data.deploy} target="_blank" aria-label={`Open ${data.name}`}>
                         <Icon icon={ArrowUpOnSquareStackIcon} />
                     </Link>
                 )}

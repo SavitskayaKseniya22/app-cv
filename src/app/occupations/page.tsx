@@ -102,7 +102,7 @@ function Occupation() {
                     </ul>
                 </li>
                 <li className={styles.occupation__item}>
-                    <Link href="/" target="_blank" className={styles.occupation__summary}>
+                    <Link href="https://www.freecodecamp.org/" target="_blank" className={styles.occupation__summary}>
                         <h3>FreeCodeCamp</h3>
                         <span>2020-2023</span>
                     </Link>

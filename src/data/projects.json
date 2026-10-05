@@ -1,5 +1,30 @@
 [
     {
+        "name": "Lang app",
+        "description": "App for learning English through games",
+        "task": "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/rslang/rslang.md",
+        "deploy": "https://app-language-learning.netlify.app/",
+        "github": "https://github.com/SavitskayaKseniya22/lang-app",
+        "preview": "/portfolio-images/lang-app/preview.png",
+        "complexity": 5,
+        "instruments": [
+            "react",
+            "vite",
+            "typescript",
+            "redux",
+            "scss",
+            "eslint",
+            "prettier",
+            "react-hook-form",
+            "react-router",
+            "react-beautiful-dnd",
+            "supabase",
+            "react-toastify"
+        ],
+        "features": ["mobile layout", "autorization", "textbook", "games", "collection of words", "game statistics"],
+        "isItReady": true
+    },
+    {
         "name": "News agent",
         "description": "Frontend for Hacker News api",
         "task": "",
@@ -205,31 +230,7 @@
         "features": ["mobile layout", "carousel", "burger menu", "modal", "hover menu"],
         "isItReady": true
     },
-    {
-        "name": "Lang app",
-        "description": "App for learning English through games",
-        "task": "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/rslang/rslang.md",
-        "deploy": "https://app-language-learning.netlify.app/",
-        "github": "https://github.com/SavitskayaKseniya22/lang-app",
-        "preview": "/portfolio-images/lang-app/preview.png",
-        "complexity": 5,
-        "instruments": [
-            "react",
-            "create-react-app",
-            "typescript",
-            "redux",
-            "styled-components",
-            "eslint",
-            "prettier",
-            "react-hook-form",
-            "react-router",
-            "react-beautiful-dnd",
-            "firebase",
-            "react-toastify"
-        ],
-        "features": ["mobile layout", "autorization", "textbook", "games", "collection of words", "game statistics"],
-        "isItReady": true
-    },
+
     {
         "name": "Kanban",
         "description": "An app for planning tasks and tracking their progress",

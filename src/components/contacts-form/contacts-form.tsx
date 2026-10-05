@@ -16,7 +16,12 @@ type Inputs = {
 };
 
 function ContactsForm() {
-    const { register, handleSubmit, reset } = useForm<Inputs>();
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors },
+    } = useForm<Inputs>();
 
     const [status, setStatus] = useState<null | "sent" | "error">(null);
     const [isSending, setIsSending] = useState<boolean>(false);
@@ -34,6 +39,7 @@ function ContactsForm() {
     }, [status]);
 
     const onSubmit: SubmitHandler<Inputs> = values => {
+        setStatus(null);
         setIsSending(true);
         emailjs
             .send(emailServiceId, emailTemplateId, values, {
@@ -53,31 +59,63 @@ function ContactsForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+        <form noValidate onSubmit={handleSubmit(onSubmit)} className={styles.form}>
             <input
                 type="text"
-                {...register("from_name", { required: true })}
+                {...register("from_name", {
+                    validate: value => value.trim().length > 0 || "Please enter your name.",
+                })}
+                aria-label="Your name"
+                aria-invalid={Boolean(errors.from_name)}
+                aria-describedby={errors.from_name ? "name-error" : undefined}
                 placeholder="Enter name"
                 className={styles.input}
             />
+            {errors.from_name && (
+                <p id="name-error" role="alert">
+                    {errors.from_name.message}
+                </p>
+            )}
             <input
                 type="email"
-                {...register("from_email", { required: true })}
+                {...register("from_email", {
+                    required: "Please enter your email.",
+                    pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Please enter a valid email address." },
+                })}
+                aria-label="Your email"
+                aria-invalid={Boolean(errors.from_email)}
+                aria-describedby={errors.from_email ? "email-error" : undefined}
                 placeholder="Enter your email"
                 className={styles.input}
             />
+            {errors.from_email && (
+                <p id="email-error" role="alert">
+                    {errors.from_email.message}
+                </p>
+            )}
             <textarea
                 rows={3}
-                {...register("message", { required: true })}
+                {...register("message", {
+                    validate: value => value.trim().length > 0 || "Please enter your message.",
+                })}
+                aria-label="Your message"
+                aria-invalid={Boolean(errors.message)}
+                aria-describedby={errors.message ? "message-error" : undefined}
                 placeholder="Enter your message"
                 className={styles.input}
             />
+            {errors.message && (
+                <p id="message-error" role="alert">
+                    {errors.message.message}
+                </p>
+            )}
             <button type="submit" disabled={isSending || status === "sent"} className={styles.button}>
-                {isSending && "Message in progress"}
+                {isSending ? "Message in progress" : "Send"}
+            </button>
+            <p role="status" aria-live="polite">
                 {status === "sent" && "Message sent successfully"}
                 {status === "error" && "An error has occurred. Try again, please"}
-                {status === null && !isSending && "Send"}
-            </button>
+            </p>
         </form>
     );
 }
