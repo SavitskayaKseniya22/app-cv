@@ -5,10 +5,14 @@ import styles from "./project.module.scss";
 import GithubLink from "../github-link/github-link";
 import Icon from "@/components/icon/icon";
 import { ArrowUpOnSquareStackIcon } from "@heroicons/react/24/outline";
+import { useLanguage, useTranslations } from "@/components/language/language-provider";
 
 const imageLoader = ({ src }: { src: string }) => src;
 
 function ProjectPreview({ data }: { data: ProjectType }) {
+    const { language } = useLanguage();
+    const t = useTranslations();
+    const projectText = data.translations[language];
     return (
         <li className={styles.project}>
             <div className={styles.project__main}>
@@ -26,11 +30,11 @@ function ProjectPreview({ data }: { data: ProjectType }) {
                 <div className={styles.project__decription}>
                     <h3>{data.name}</h3>
 
-                    <p>{data.description}</p>
+                    <p>{projectText.description}</p>
                 </div>
 
                 <div className={styles.project__type}>
-                    <p>{data.type.toUpperCase()}</p>
+                    <p>{projectText.type.toUpperCase()}</p>
                 </div>
 
                 {data.deploy && (
@@ -42,7 +46,7 @@ function ProjectPreview({ data }: { data: ProjectType }) {
             </div>
             {data.instruments.length > 0 && (
                 <div className={styles.project__block}>
-                    <h4>Instruments:</h4>
+                    <h4>{t("portfolio", "instruments")}</h4>
                     <ul className={styles.project__instruments}>
                         {data.instruments.map(instrument => (
                             <li key={`${data.name}-${instrument}`}>{instrument}</li>
@@ -51,11 +55,11 @@ function ProjectPreview({ data }: { data: ProjectType }) {
                 </div>
             )}
 
-            {data.features && data.features.length > 0 && (
+            {projectText.features && projectText.features.length > 0 && (
                 <div className={styles.project__block}>
-                    <h4>Features:</h4>
+                    <h4>{t("portfolio", "features")}</h4>
                     <ul className={styles.project__features}>
-                        {data.features.map(feature => (
+                        {projectText.features.map(feature => (
                             <li key={`${data.name}-${feature}`}>{feature}</li>
                         ))}
                     </ul>

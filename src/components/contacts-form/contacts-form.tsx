@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import styles from "./form.module.scss";
+import { useLanguage, useTranslations } from "@/components/language/language-provider";
 
 const emailServiceId = "service_h0yuidd";
 const emailTemplateId = "template_8fl60sd";
@@ -16,6 +17,7 @@ type Inputs = {
 };
 
 function ContactsForm() {
+    const t = useTranslations();
     const {
         register,
         handleSubmit,
@@ -63,12 +65,12 @@ function ContactsForm() {
             <input
                 type="text"
                 {...register("from_name", {
-                    validate: value => value.trim().length > 0 || "Please enter your name.",
+                    validate: value => value.trim().length > 0 || t("form", "nameRequired"),
                 })}
-                aria-label="Your name"
+                aria-label={t("form", "name")}
                 aria-invalid={Boolean(errors.from_name)}
                 aria-describedby={errors.from_name ? "name-error" : undefined}
-                placeholder="Enter name"
+                placeholder={t("form", "enterName")}
                 className={styles.input}
             />
             {errors.from_name && (
@@ -79,13 +81,13 @@ function ContactsForm() {
             <input
                 type="email"
                 {...register("from_email", {
-                    required: "Please enter your email.",
-                    pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Please enter a valid email address." },
+                    required: t("form", "emailRequired"),
+                    pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: t("form", "emailInvalid") },
                 })}
-                aria-label="Your email"
+                aria-label={t("form", "email")}
                 aria-invalid={Boolean(errors.from_email)}
                 aria-describedby={errors.from_email ? "email-error" : undefined}
-                placeholder="Enter your email"
+                placeholder={t("form", "enterEmail")}
                 className={styles.input}
             />
             {errors.from_email && (
@@ -96,12 +98,12 @@ function ContactsForm() {
             <textarea
                 rows={3}
                 {...register("message", {
-                    validate: value => value.trim().length > 0 || "Please enter your message.",
+                    validate: value => value.trim().length > 0 || t("form", "messageRequired"),
                 })}
-                aria-label="Your message"
+                aria-label={t("form", "message")}
                 aria-invalid={Boolean(errors.message)}
                 aria-describedby={errors.message ? "message-error" : undefined}
-                placeholder="Enter your message"
+                placeholder={t("form", "enterMessage")}
                 className={styles.input}
             />
             {errors.message && (
@@ -110,11 +112,11 @@ function ContactsForm() {
                 </p>
             )}
             <button type="submit" disabled={isSending || status === "sent"} className={styles.button}>
-                {isSending ? "Message in progress" : "Send"}
+                {isSending ? t("form", "sending") : t("form", "send")}
             </button>
             <p role="status" aria-live="polite">
-                {status === "sent" && "Message sent successfully"}
-                {status === "error" && "An error has occurred. Try again, please"}
+                {status === "sent" && t("form", "sent")}
+                {status === "error" && t("form", "error")}
             </p>
         </form>
     );

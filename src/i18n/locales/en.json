@@ -1,0 +1,69 @@
+{
+    "navigation": {
+        "about": "About Me",
+        "portfolio": "Portfolio",
+        "occupations": "Occupations",
+        "downloadCv": "Get CV",
+        "switchToEnglish": "Switch language to English",
+        "switchToRussian": "Switch language to Russian"
+    },
+    "about": {
+        "intro": "Hi! I'm a web developer who builds modern, fast, and user-friendly web applications. I value clean code, thoughtful architecture, and attention to detail. I'm constantly learning new technologies and strive to create solutions that are both reliable and enjoyable to use.",
+        "location": "Location: Sofia, Bulgaria",
+        "languages": "Languages: English - B2, Russian - native"
+    },
+    "portfolio": {
+        "loading": "Loading...",
+        "loadError": "Failed to load projects.",
+        "empty": "No portfolio data.",
+        "instruments": "Instruments:",
+        "features": "Features:"
+    },
+    "experience": {
+        "related": "Related work experience",
+        "creosRole": "CREOS Play / Frontend Developer",
+        "creosCorporate": "Developed the company's corporate website",
+        "creosLanding": "Developed the frontend for a landing page promoting one of the company's services",
+        "creosPlatform": "Contributed to a video creative production management platform. Clients create and manage orders, review deliverables, and provide feedback. Implemented role-based access for clients, designers, and managers. Clients can generate AI-assisted creative concepts and previews. Designers manage assigned tasks, track progress, and handle financial workflows. Managers assign work, monitor project progress, manage team workloads, and administer the platform.",
+        "creosAnalytics": "Developed an internal analytics portal with dashboards for subcontractor performance, profitability, project statistics, and designer workload, revenue, completed projects, and performance indicators.",
+        "websovetRole": "Websovet / Frontend Developer",
+        "websovetCorporate": "Developed the company's corporate website",
+        "match3": "Created concepts for match-3 games",
+        "education": "Education",
+        "architecture": "Altai State Technical University / Architecture",
+        "architectureDesign": "Design of buildings, interiors, structures, and small architectural forms",
+        "visualDesign": "Visual design principles",
+        "cad": "CAD for engineering",
+        "jsCourse": "JavaScript course",
+        "reactCourse": "React course",
+        "responsiveDesign": "Responsive web design",
+        "algorithms": "JavaScript algorithms and data structures",
+        "frontEndLibraries": "Front-end development libraries",
+        "backEndApis": "Back-end development and APIs",
+        "unrelated": "Other work experience",
+        "assessor": "Assessor",
+        "searchRanking": "Ranked search results by relevance",
+        "textAnalysis": "Analyzed text data and media content",
+        "quickpayRole": "Quickpay / Payment system support",
+        "paymentAdmin": "Administered and monitored payment processing",
+        "problemSolving": "Resolved customer issues",
+        "googleRole": "Google / Field Agent",
+        "googleProject": "Short-term project collecting, processing, and analyzing information about local organizations and businesses"
+    },
+    "form": {
+        "name": "Your name",
+        "enterName": "Enter name",
+        "nameRequired": "Please enter your name.",
+        "email": "Your email",
+        "enterEmail": "Enter your email",
+        "emailRequired": "Please enter your email.",
+        "emailInvalid": "Please enter a valid email address.",
+        "message": "Your message",
+        "enterMessage": "Enter your message",
+        "messageRequired": "Please enter your message.",
+        "sending": "Message in progress",
+        "send": "Send",
+        "sent": "Message sent successfully",
+        "error": "An error has occurred. Try again, please"
+    }
+}

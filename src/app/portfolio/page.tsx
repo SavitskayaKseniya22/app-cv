@@ -6,12 +6,16 @@ import styles from "./portfolio.module.scss";
 import Icon from "@/components/icon/icon";
 import { BriefcaseIcon } from "@heroicons/react/24/outline";
 import ProjectPreview from "./components/project-preview/project-preview";
+import { useLanguage } from "@/components/language/language-provider";
+import { useTranslations } from "@/components/language/language-provider";
 
 function Portfolio() {
     const [portfolioData, setPortfolioData] = useState<ProjectType[]>([]);
 
     const [isLoading, setLoading] = useState(true);
     const [error, setError] = useState(false);
+    const { language } = useLanguage();
+    const t = useTranslations();
 
     useEffect(() => {
         const controller = new AbortController();
@@ -39,15 +43,15 @@ function Portfolio() {
     }, []);
 
     if (isLoading) {
-        return <p>Loading...</p>;
+        return <p>{t("portfolio", "loading")}</p>;
     }
 
     if (error) {
-        return <p>Failed to load projects.</p>;
+        return <p>{t("portfolio", "loadError")}</p>;
     }
 
     if (portfolioData.length === 0) {
-        return <p>No portfolio data.</p>;
+        return <p>{t("portfolio", "empty")}</p>;
     }
 
     return (

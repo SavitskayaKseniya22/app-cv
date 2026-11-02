@@ -1,8 +1,6 @@
 [
     {
         "name": "Lang app",
-        "description": "App for learning English through games",
-        "type": "app",
         "task": "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/rslang/rslang.md",
         "deploy": "https://app-language-learning.netlify.app/",
         "github": "https://github.com/SavitskayaKseniya22/lang-app",
@@ -21,83 +19,245 @@
             "supabase",
             "react-toastify"
         ],
-        "features": ["mobile layout", "autorization", "textbook", "games", "collection of words", "game statistics"],
-        "isItReady": true
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "App for learning English through games",
+                "type": "app",
+                "features": [
+                    "mobile layout",
+                    "autorization",
+                    "textbook",
+                    "games",
+                    "collection of words",
+                    "game statistics"
+                ]
+            },
+            "ru": {
+                "description": "Приложение для изучения английского языка с помощью игр",
+                "type": "Приложение",
+                "features": [
+                    "Мобильная версия",
+                    "Авторизация",
+                    "Учебник",
+                    "Игры",
+                    "Коллекция слов",
+                    "Игровая статистика"
+                ]
+            }
+        }
     },
     {
         "name": "News agent",
-        "description": "Frontend for Hacker News api",
-        "type": "app",
         "deploy": "https://news-agent.netlify.app/",
         "github": "https://github.com/SavitskayaKseniya22/app-news-agent",
-        "instruments": ["next", "heroicons", "react", "zod", "tailwindcss", "eslint", "prettier", "typescript"],
+        "instruments": [
+            "next",
+            "heroicons",
+            "react",
+            "zod",
+            "tailwindcss",
+            "eslint",
+            "prettier",
+            "typescript"
+        ],
         "preview": "/portfolio-images/news-agent/preview.png",
-        "features": ["mobile layout"],
-        "isItReady": true
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "Frontend for Hacker News api",
+                "type": "app",
+                "features": [
+                    "mobile layout"
+                ]
+            },
+            "ru": {
+                "description": "Клиентская часть для API Hacker News",
+                "type": "Приложение",
+                "features": [
+                    "Мобильная версия"
+                ]
+            }
+        }
     },
     {
         "name": "CV",
-        "description": "CV",
-        "type": "app",
         "deploy": "https://kseniia-savitskaia.netlify.app/",
         "github": "https://github.com/SavitskayaKseniya22/cv",
-        "instruments": ["next", "heroicons", "typescript", "react", "prettier", "eslint", "sass"],
+        "instruments": [
+            "next",
+            "heroicons",
+            "typescript",
+            "react",
+            "prettier",
+            "eslint",
+            "sass"
+        ],
         "preview": "/portfolio-images/cv/preview.png",
-        "features": ["mobile layout"],
-        "isItReady": true
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "CV",
+                "type": "app",
+                "features": [
+                    "mobile layout"
+                ]
+            },
+            "ru": {
+                "description": "Резюме",
+                "type": "Приложение",
+                "features": [
+                    "Мобильная версия"
+                ]
+            }
+        }
     },
     {
         "name": "Пестовский лесокомбинат",
-        "description": "Landing page for local timber processing complex",
-        "type": "test assignment",
         "deploy": "https://test-factory-landing-page.netlify.app/",
         "github": "https://github.com/SavitskayaKseniya22/test-factory-landing-page",
-        "instruments": ["vite", "sass", "prettier", "normalize.css", "swiper", "bootstrap"],
+        "instruments": [
+            "vite",
+            "sass",
+            "prettier",
+            "normalize.css",
+            "swiper",
+            "bootstrap"
+        ],
         "preview": "/portfolio-images/factory/preview.png",
-        "features": ["carousel", "slider", "mobile layout"],
-        "isItReady": true
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "Landing page for local timber processing complex",
+                "type": "test assignment",
+                "features": [
+                    "carousel",
+                    "slider",
+                    "mobile layout"
+                ]
+            },
+            "ru": {
+                "description": "Сайт местного лесоперерабатывающего комплекса",
+                "type": "Тестовое задание",
+                "features": [
+                    "Карусель",
+                    "Слайдер",
+                    "Мобильная версия"
+                ]
+            }
+        }
     },
     {
         "name": "User search",
-        "description": "User directory with pagination and search",
-        "type": "test assignment",
         "deploy": "https://test-gaba-user-search.netlify.app/",
         "github": "https://github.com/SavitskayaKseniya22/test-gaba",
-        "instruments": ["typescript", "eslint", "prettier", "react-hook-form", "vite", "react", "tailwindcss"],
+        "instruments": [
+            "typescript",
+            "eslint",
+            "prettier",
+            "react-hook-form",
+            "vite",
+            "react",
+            "tailwindcss"
+        ],
         "preview": "/portfolio-images/gaba/preview.png",
-        "features": ["pagination", "user search", "mobile layout"],
-        "isItReady": true
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "User directory with pagination and search",
+                "type": "test assignment",
+                "features": [
+                    "pagination",
+                    "user search",
+                    "mobile layout"
+                ]
+            },
+            "ru": {
+                "description": "Каталог пользователей с поиском и постраничной навигацией",
+                "type": "Тестовое задание",
+                "features": [
+                    "Постраничная навигация",
+                    "Поиск пользователей",
+                    "Мобильная версия"
+                ]
+            }
+        }
     },
     {
         "name": "ToDo",
-        "description": "To-do list with filtering",
-        "type": "test assignment",
         "deploy": "https://test-green-todo.netlify.app/",
         "github": "https://github.com/SavitskayaKseniya22/test-green-todo",
-        "instruments": ["react", "typescript", "eslint", "next", "heroicons", "tailwind", "jest"],
+        "instruments": [
+            "react",
+            "typescript",
+            "eslint",
+            "next",
+            "heroicons",
+            "tailwind",
+            "jest"
+        ],
         "preview": "/portfolio-images/todo/preview.png",
-        "features": ["to do list", "mobile layout", "filter for list"],
-        "isItReady": true
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "To-do list with filtering",
+                "type": "test assignment",
+                "features": [
+                    "to do list",
+                    "mobile layout",
+                    "filter for list"
+                ]
+            },
+            "ru": {
+                "description": "Список задач с фильтрацией",
+                "type": "Тестовое задание",
+                "features": [
+                    "Список задач",
+                    "Мобильная версия",
+                    "Фильтрация списка"
+                ]
+            }
+        }
     },
     {
         "name": "ToDo with user list",
-        "description": "A list of tasks and a list of users, with a detailed profile card for each",
-        "type": "test assignment",
         "deploy": "https://test-make-union-todo.netlify.app/",
         "github": "https://github.com/SavitskayaKseniya22/test-make-union-todo",
-        "instruments": ["react", "vite", "typescript", "eslint", "prettier"],
+        "instruments": [
+            "react",
+            "vite",
+            "typescript",
+            "eslint",
+            "prettier"
+        ],
         "preview": "/portfolio-images/todo-union/preview.png",
-        "features": ["users page", "to do list", "mobile layout"],
-        "isItReady": true
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "A list of tasks and a list of users, with a detailed profile card for each",
+                "type": "test assignment",
+                "features": [
+                    "users page",
+                    "to do list",
+                    "mobile layout"
+                ]
+            },
+            "ru": {
+                "description": "Список задач и пользователей с подробными карточками профиля",
+                "type": "Тестовое задание",
+                "features": [
+                    "Страница пользователей",
+                    "Список задач",
+                    "Мобильная версия"
+                ]
+            }
+        }
     },
     {
         "name": "Fallout minesweeper",
-        "description": "Minesweeper is a logic puzzle video game. Style - Fallout - popular video game",
-        "type": "app",
         "task": "https://github.com/rolling-scopes-school/tasks/tree/master/tasks/minesweeper",
         "deploy": "https://fallout-minesweeper.netlify.app/",
         "github": "https://github.com/SavitskayaKseniya22/minesweeper",
-        "features": ["select or customize the difficulty level", "saving game progress", "local leaderboard"],
         "instruments": [
             "react",
             "create-react-app",
@@ -115,86 +275,226 @@
             "netlify"
         ],
         "preview": "/portfolio-images/fallout-minesweeper/preview.png",
-        "isItReady": true
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "Minesweeper is a logic puzzle video game. Style - Fallout - popular video game",
+                "type": "app",
+                "features": [
+                    "select or customize the difficulty level",
+                    "saving game progress",
+                    "local leaderboard"
+                ]
+            },
+            "ru": {
+                "description": "Логическая игра «Сапёр» в стиле Fallout",
+                "type": "Приложение",
+                "features": [
+                    "Выбор уровня сложности",
+                    "Сохранение прогресса",
+                    "Локальная таблица рекордов"
+                ]
+            }
+        }
     },
     {
         "name": "Virtual keyboard",
-        "description": "Simple virtual keyboard",
-        "type": "app",
         "task": "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/virtual-keyboard/virtual-keyboard-en.md",
         "deploy": "https://poetic-tarsier-ff7606.netlify.app/",
         "github": "https://github.com/SavitskayaKseniya22/virtual-keyboard",
-        "instruments": ["javascript", "eslint", "sass", "prettier", "webpack", "normalize.css"],
+        "instruments": [
+            "javascript",
+            "eslint",
+            "sass",
+            "prettier",
+            "webpack",
+            "normalize.css"
+        ],
         "preview": "/portfolio-images/virtual-keyboard/preview.png",
-        "isItReady": true
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "Simple virtual keyboard",
+                "type": "app"
+            },
+            "ru": {
+                "description": "Простая виртуальная клавиатура",
+                "type": "Приложение"
+            }
+        }
     },
     {
         "name": "Momentum",
-        "description": "An analogue of the app of the same name in the Chrome Web Store.",
-        "type": "app",
         "task": "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/momentum/momentum.md",
         "deploy": "https://illustrious-dusk-12045b.netlify.app/",
         "github": "https://github.com/SavitskayaKseniya22/momentum",
-        "instruments": ["typescript", "sass", "eslint", "prettier", "boxicons", "normalize.css", "i18next", "netlify"],
-        "preview": "/portfolio-images/momentum/preview.png",
-        "features": [
-            "clock",
-            "custom music player",
-            "weather",
-            "to do list",
-            "three sources for background",
-            "internationalization",
-            "random quote",
-            "changing visibility for blocks"
+        "instruments": [
+            "typescript",
+            "sass",
+            "eslint",
+            "prettier",
+            "boxicons",
+            "normalize.css",
+            "i18next",
+            "netlify"
         ],
-        "isItReady": true
+        "preview": "/portfolio-images/momentum/preview.png",
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "An analogue of the app of the same name in the Chrome Web Store.",
+                "type": "app",
+                "features": [
+                    "clock",
+                    "custom music player",
+                    "weather",
+                    "to do list",
+                    "three sources for background",
+                    "internationalization",
+                    "random quote",
+                    "changing visibility for blocks"
+                ]
+            },
+            "ru": {
+                "description": "Аналог одноимённого приложения из Chrome Web Store",
+                "type": "Приложение",
+                "features": [
+                    "Часы",
+                    "Музыкальный плеер",
+                    "Погода",
+                    "Список задач",
+                    "Три источника фона",
+                    "Локализация",
+                    "Случайная цитата",
+                    "Настройка видимости блоков"
+                ]
+            }
+        }
     },
     {
         "name": "Logi mouse",
-        "description": "Logitech mouse advertising landing page",
-        "type": "landing page",
         "deploy": "https://logi-mouse.vercel.app",
         "github": "https://github.com/SavitskayaKseniya22/Logi_mouse",
         "preview": "/portfolio-images/logi-mouse/preview.png",
-        "instruments": ["javascript", "bootstrap-carousel", "eslint", "prettier", "sass", "webpack", "normalize.css"],
-        "features": ["mobile layout", "burger menu", "carousel"],
-        "isItReady": true
+        "instruments": [
+            "javascript",
+            "bootstrap-carousel",
+            "eslint",
+            "prettier",
+            "sass",
+            "webpack",
+            "normalize.css"
+        ],
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "Logitech mouse advertising landing page",
+                "type": "landing page",
+                "features": [
+                    "mobile layout",
+                    "burger menu",
+                    "carousel"
+                ]
+            },
+            "ru": {
+                "description": "Рекламный лендинг мыши Logitech",
+                "type": "Лендинг",
+                "features": [
+                    "Мобильная версия",
+                    "Бургер-меню",
+                    "Карусель"
+                ]
+            }
+        }
     },
     {
         "name": "Art quiz",
-        "description": "Quiz on the knowledge of masterpieces of painting and their authors.",
-        "type": "app",
         "task": "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/art-quiz/art-quiz.md",
         "deploy": "https://art-quiz-2.netlify.app/",
         "github": "https://github.com/SavitskayaKseniya22/art-quiz2.0",
-        "instruments": ["typescript", "eslint", "prettier", "netlify", "sass", "boxicons", "normalize.css", "i18next"],
-        "preview": "/portfolio-images/art-quiz/preview.png",
-        "features": [
-            "sounds settings",
-            "saving and viewing the player’s answers",
-            "timer",
-            "internationalization",
-            "two types of game",
-            "mobile layout"
+        "instruments": [
+            "typescript",
+            "eslint",
+            "prettier",
+            "netlify",
+            "sass",
+            "boxicons",
+            "normalize.css",
+            "i18next"
         ],
-        "isItReady": true
+        "preview": "/portfolio-images/art-quiz/preview.png",
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "Quiz on the knowledge of masterpieces of painting and their authors.",
+                "type": "app",
+                "features": [
+                    "sounds settings",
+                    "saving and viewing the player’s answers",
+                    "timer",
+                    "internationalization",
+                    "two types of game",
+                    "mobile layout"
+                ]
+            },
+            "ru": {
+                "description": "Викторина о шедеврах живописи и их авторах",
+                "type": "Приложение",
+                "features": [
+                    "Настройки звука",
+                    "Сохранение ответов",
+                    "Таймер",
+                    "Локализация",
+                    "Два режима игры",
+                    "Мобильная версия"
+                ]
+            }
+        }
     },
     {
         "name": "Shelter",
-        "description": "Landing page of the Shelter",
-        "type": "landing page",
         "task": "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/shelter/shelter.md",
         "deploy": "https://shelter-lemon.vercel.app/",
         "github": "https://github.com/SavitskayaKseniya22/shelter",
-        "instruments": ["typescript", "sass", "prettier", "eslint", "normalize.css", "react", "next", "heroicons"],
+        "instruments": [
+            "typescript",
+            "sass",
+            "prettier",
+            "eslint",
+            "normalize.css",
+            "react",
+            "next",
+            "heroicons"
+        ],
         "preview": "/portfolio-images/shelter/preview.png",
-        "features": ["carousel", "modal", "burger menu", "pagination", "mobile layout"],
-        "isItReady": true
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "Landing page of the Shelter",
+                "type": "landing page",
+                "features": [
+                    "carousel",
+                    "modal",
+                    "burger menu",
+                    "pagination",
+                    "mobile layout"
+                ]
+            },
+            "ru": {
+                "description": "Сайт приюта для животных",
+                "type": "Лендинг",
+                "features": [
+                    "Карусель",
+                    "Модальное окно",
+                    "Бургер-меню",
+                    "Постраничная навигация",
+                    "Мобильная версия"
+                ]
+            }
+        }
     },
     {
         "name": "Museum",
-        "description": "Landing page of the Louvre, one of the largest and most popular art museums in the world.",
-        "type": "landing page",
         "task": "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/museum/museum.md",
         "deploy": "https://museum-liart.vercel.app/",
         "github": "https://github.com/SavitskayaKseniya22/museum",
@@ -210,35 +510,81 @@
             "react"
         ],
         "preview": "/portfolio-images/museum/preview.png",
-        "features": [
-            "carousel",
-            "burger menu",
-            "custom player and playlist",
-            "modal",
-            "purchase form",
-            "parallax effect",
-            "map",
-            "image slider",
-            "mobile layout"
-        ],
-        "isItReady": true
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "Landing page of the Louvre, one of the largest and most popular art museums in the world.",
+                "type": "landing page",
+                "features": [
+                    "carousel",
+                    "burger menu",
+                    "custom player and playlist",
+                    "modal",
+                    "purchase form",
+                    "parallax effect",
+                    "map",
+                    "image slider",
+                    "mobile layout"
+                ]
+            },
+            "ru": {
+                "description": "Сайт Лувра — одного из крупнейших и самых известных художественных музеев мира",
+                "type": "Лендинг",
+                "features": [
+                    "Карусель",
+                    "Бургер-меню",
+                    "Плеер и плейлист",
+                    "Модальное окно",
+                    "Форма покупки",
+                    "Эффект параллакса",
+                    "Карта",
+                    "Слайдер изображений",
+                    "Мобильная версия"
+                ]
+            }
+        }
     },
     {
         "name": "Technomart",
-        "description": "Landing page for Technomart store",
-        "type": "landing page",
         "deploy": "https://technomart-omega.vercel.app/",
         "github": "https://github.com/SavitskayaKseniya22/Technomart",
-        "instruments": ["eslint", "prettier", "sass", "typescript", "webpack", "normalize.css"],
+        "instruments": [
+            "eslint",
+            "prettier",
+            "sass",
+            "typescript",
+            "webpack",
+            "normalize.css"
+        ],
         "preview": "/portfolio-images/technomart/preview.png",
-        "features": ["mobile layout", "carousel", "burger menu", "modal", "hover menu"],
-        "isItReady": true
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "Landing page for Technomart store",
+                "type": "landing page",
+                "features": [
+                    "mobile layout",
+                    "carousel",
+                    "burger menu",
+                    "modal",
+                    "hover menu"
+                ]
+            },
+            "ru": {
+                "description": "Сайт магазина Technomart",
+                "type": "Лендинг",
+                "features": [
+                    "Мобильная версия",
+                    "Карусель",
+                    "Бургер-меню",
+                    "Модальное окно",
+                    "Меню при наведении"
+                ]
+            }
+        }
     },
-
     {
         "name": "Kanban",
-        "description": "app for planning tasks and tracking their progress",
-        "type": "app",
         "task": "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/react/final-task-project-management-app.md",
         "deploy": "https://awesomekanban.netlify.app/",
         "github": "https://github.com/SavitskayaKseniya22/kanban-app",
@@ -260,45 +606,100 @@
             "react-router"
         ],
         "preview": "/portfolio-images/kanban/preview.png",
-        "features": ["internationalization", "autorization", "drag and drop"],
-        "isItReady": true
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "app for planning tasks and tracking their progress",
+                "type": "app",
+                "features": [
+                    "internationalization",
+                    "autorization",
+                    "drag and drop"
+                ]
+            },
+            "ru": {
+                "description": "Приложение для планирования задач и отслеживания их выполнения",
+                "type": "Приложение",
+                "features": [
+                    "Локализация",
+                    "Авторизация",
+                    "Перетаскивание элементов"
+                ]
+            }
+        }
     },
-
     {
         "name": "Async race",
-        "description": "Racing arcade",
-        "type": "app",
         "task": "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/async-race.md",
         "deploy": "https://savitskayakseniya22.github.io/async-race",
         "github": "https://github.com/SavitskayaKseniya22/async-race",
-        "instruments": ["typescript", "eslint", "prettier", "gh-pages", "sass", "boxicons", "normalize.css"],
+        "instruments": [
+            "typescript",
+            "eslint",
+            "prettier",
+            "gh-pages",
+            "sass",
+            "boxicons",
+            "normalize.css"
+        ],
         "preview": "/portfolio-images/async-race/preview.png",
-        "isItReady": false
+        "isItReady": false,
+        "translations": {
+            "en": {
+                "description": "Racing arcade",
+                "type": "app"
+            },
+            "ru": {
+                "description": "Гоночная аркада",
+                "type": "Приложение"
+            }
+        }
     },
     {
         "name": "Christmas tree",
-        "description": "application that will allow you to select New Year's decorations and decorate the Christmas tree with the selected toys.",
-        "type": "app",
         "task": "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/christmas-task/christmas-task.md",
         "deploy": "https://christmas-tree-xi.vercel.app/",
         "github": "https://github.com/SavitskayaKseniya22/christmas-tree",
-        "instruments": ["typescript", "sass", "prettier", "nouislider", "webpack", "eslint", "normalize.css"],
-        "preview": "/portfolio-images/christmas-tree/preview.png",
-        "features": [
-            "drag and drop ",
-            "filter",
-            "setting different backgroud",
-            "music and snow animation",
-            "an animated garland",
-            "selection of toys"
+        "instruments": [
+            "typescript",
+            "sass",
+            "prettier",
+            "nouislider",
+            "webpack",
+            "eslint",
+            "normalize.css"
         ],
-        "isItReady": true
+        "preview": "/portfolio-images/christmas-tree/preview.png",
+        "isItReady": true,
+        "translations": {
+            "en": {
+                "description": "application that will allow you to select New Year's decorations and decorate the Christmas tree with the selected toys.",
+                "type": "app",
+                "features": [
+                    "drag and drop ",
+                    "filter",
+                    "setting different backgroud",
+                    "music and snow animation",
+                    "an animated garland",
+                    "selection of toys"
+                ]
+            },
+            "ru": {
+                "description": "Приложение для выбора новогодних украшений и оформления ёлки",
+                "type": "Приложение",
+                "features": [
+                    "Перетаскивание",
+                    "Фильтр",
+                    "Настройка фона",
+                    "Музыка и анимация снега",
+                    "Анимированная гирлянда",
+                    "Выбор игрушек"
+                ]
+            }
+        }
     },
-
     {
         "name": "Remember moments app",
-        "description": "Travel planning app",
-        "type": "app",
         "deploy": "",
         "github": "https://github.com/SavitskayaKseniya22/remember-moments-app",
         "instruments": [
@@ -318,7 +719,22 @@
             "react-router"
         ],
         "preview": "/portfolio-images/remember-moments-app/preview.png",
-        "features": ["mobile layout"],
-        "isItReady": false
+        "isItReady": false,
+        "translations": {
+            "en": {
+                "description": "Travel planning app",
+                "type": "app",
+                "features": [
+                    "mobile layout"
+                ]
+            },
+            "ru": {
+                "description": "Приложение для планирования путешествий",
+                "type": "Приложение",
+                "features": [
+                    "Мобильная версия"
+                ]
+            }
+        }
     }
 ]

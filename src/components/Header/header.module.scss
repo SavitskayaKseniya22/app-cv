@@ -6,6 +6,9 @@
 
     @include mx.media(tablet) {
         flex-direction: column;
+        flex: 0 0 15rem;
+        width: 15rem;
+        min-width: 15rem;
         height: 60%;
     }
 

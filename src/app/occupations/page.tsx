@@ -1,20 +1,24 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { AcademicCapIcon, BriefcaseIcon } from "@heroicons/react/24/outline";
 import styles from "./occupations.module.scss";
 import Icon from "@/components/icon/icon";
+import { useTranslations } from "@/components/language/language-provider";
 
 function Occupation() {
+    const t = useTranslations();
     return (
         <>
             <h2 className={styles["occupation__chapter-title"]}>
                 <Icon icon={BriefcaseIcon} />
-                Related work experience
+                {t("experience", "related")}
             </h2>
             <ul className={styles.occupation__chapter}>
                 <li className={styles.occupation__item}>
                     <Link href="https://creos.me/" target="_blank" className={styles.occupation__summary}>
-                        <h3>CREOS Play / Fronted-developer</h3>
+                        <h3>{t("experience", "creosRole")}</h3>
                         <span>07/2024-03/2026</span>
                     </Link>
                     <ul className={styles.occupation__list}>
@@ -22,37 +26,28 @@ function Occupation() {
                             <Link href="https://creos.me/" target="_blank">
                                 creos.me
                             </Link>{" "}
-                            — Developed the company&apos;s corporate website
+                            — {t("experience", "creosCorporate")}
                         </li>
                         <li>
                             <Link href="https://market.creosplay.io/" target="_blank">
                                 market.creosplay.io
                             </Link>{" "}
-                            — Developed the frontend for a landing page promoting one of the company&apos;s services
+                            — {t("experience", "creosLanding")}
                         </li>
                         <li>
                             <Link href="https://creosplay.io/" target="_blank">
                                 creosplay.io
                             </Link>{" "}
-                            — Contributed to the development of a video creative production management platform. The
-                            platform enables clients to create and manage orders, review deliverables, and provide
-                            feedback. Implemented a role-based system for clients, designers, and managers. Clients can
-                            create orders and generate AI-assisted creative concepts and previews (images and videos).
-                            Designers manage assigned tasks, track progress, and handle financial workflows. Managers
-                            assign work, monitor project progress, manage team workloads, and administer the platform
+                            — {t("experience", "creosPlatform")}
                         </li>
                         <li>
-                            Developed an internal analytics portal for visualizing the company&apos;s key business
-                            metrics. The system provides dashboards for subcontractor performance, financial
-                            profitability metrics, and project statistics. Implemented analytics for designers,
-                            including workload, revenue, completed projects, and individual performance indicators,
-                            enabling data-driven monitoring and operational decision-making.
+                            {t("experience", "creosAnalytics")}
                         </li>
                     </ul>
                 </li>
                 <li className={styles.occupation__item}>
                     <Link href="https://websovet.ru" target="_blank" className={styles.occupation__summary}>
-                        <h3>Websovet / Fronted-developer</h3>
+                        <h3>{t("experience", "websovetRole")}</h3>
                         <span>04/2024-06/2024</span>
                     </Link>
                     <ul className={styles.occupation__list}>
@@ -60,27 +55,27 @@ function Occupation() {
                             <Link href="https://websovet.ru/" target="_blank">
                                 websovet.ru
                             </Link>{" "}
-                            - Developed the company&apos;s corporate website
+                        - {t("experience", "websovetCorporate")}
                         </li>
-                        <li>Creating concepts for match-3 games</li>
+                        <li>{t("experience", "match3")}</li>
                     </ul>
                 </li>
             </ul>
 
             <h2 className={styles["occupation__chapter-title"]}>
                 <Icon icon={AcademicCapIcon} />
-                Education
+                {t("experience", "education")}
             </h2>
             <ul className={styles.occupation__chapter}>
                 <li className={styles.occupation__item}>
                     <Link href="https://en.altstu.ru/" target="_blank" className={styles.occupation__summary}>
-                        <h3>Altai State Technical University / Architecture</h3>
+                        <h3>{t("experience", "architecture")}</h3>
                         <span>2011-2016</span>
                     </Link>
                     <ul className={styles.occupation__list}>
-                        <li>Design of buildings, interior, structures and small architectural forms</li>
-                        <li>Visual Design Principles</li>
-                        <li>CAD for engineering</li>
+                        <li>{t("experience", "architectureDesign")}</li>
+                        <li>{t("experience", "visualDesign")}</li>
+                        <li>{t("experience", "cad")}</li>
                     </ul>
                 </li>
                 <li className={styles.occupation__item}>
@@ -91,12 +86,12 @@ function Occupation() {
                     <ul className={styles.occupation__list}>
                         <li>
                             <Link href="https://app.rs.school/certificate/kk9vy6aa" target="_blank">
-                                JavaScript course
+                                {t("experience", "jsCourse")}
                             </Link>
                         </li>
                         <li>
                             <Link href="https://app.rs.school/certificate/u3kin2dj" target="_blank">
-                                React course
+                                {t("experience", "reactCourse")}
                             </Link>
                         </li>
                     </ul>
@@ -107,10 +102,10 @@ function Occupation() {
                         <span>2020-2023</span>
                     </Link>
                     <ul className={styles.occupation__list}>
-                        <li>Responsive Web Design</li>
-                        <li>JavaScript Algorithms and Data Structures</li>
-                        <li>Front End Development Libraries</li>
-                        <li>Back End Development and APIs</li>
+                        <li>{t("experience", "responsiveDesign")}</li>
+                        <li>{t("experience", "algorithms")}</li>
+                        <li>{t("experience", "frontEndLibraries")}</li>
+                        <li>{t("experience", "backEndApis")}</li>
                     </ul>
                 </li>
                 <li className={styles.occupation__item}>
@@ -126,49 +121,48 @@ function Occupation() {
             </ul>
             <h2 className={styles["occupation__chapter-title"]}>
                 <Icon icon={BriefcaseIcon} />
-                Unrelated work experience
+                {t("experience", "unrelated")}
             </h2>
             <ul className={styles.occupation__chapter}>
                 <li className={styles.occupation__item}>
                     <div className={styles.occupation__summary}>
-                        <h3>Yandex / Asessor</h3>
+                        <h3>Yandex / {t("experience", "assessor")}</h3>
                         <span>2016-2022</span>
                     </div>
                     <ul className={styles.occupation__list}>
-                        <li>Ranking the results of search queries by relevance</li>
-                        <li>Analysis of text data and media content</li>
+                        <li>{t("experience", "searchRanking")}</li>
+                        <li>{t("experience", "textAnalysis")}</li>
                     </ul>
                 </li>
                 <li className={styles.occupation__item}>
                     <div className={styles.occupation__summary}>
-                        <h3>Mail.ru / Asessor</h3>
+                        <h3>Mail.ru / {t("experience", "assessor")}</h3>
                         <span>2018</span>
                     </div>
                     <ul className={styles.occupation__list}>
-                        <li>Ranking the results of search queries by relevance</li>
-                        <li>Analysis of text data and media content</li>
+                        <li>{t("experience", "searchRanking")}</li>
+                        <li>{t("experience", "textAnalysis")}</li>
                     </ul>
                 </li>
                 <li className={styles.occupation__item}>
                     <Link href="https://quickpay.ru/" target="_blank" className={styles.occupation__summary}>
-                        <h3>Quickpay - payments system / Client support</h3>
+                        <h3>{t("experience", "quickpayRole")}</h3>
                         <span>2013-2016</span>
                     </Link>
 
                     <ul className={styles.occupation__list}>
-                        <li>Administration and control of the payment process</li>
-                        <li>Problem solving</li>
+                        <li>{t("experience", "paymentAdmin")}</li>
+                        <li>{t("experience", "problemSolving")}</li>
                     </ul>
                 </li>
                 <li className={styles.occupation__item}>
                     <div className={styles.occupation__summary}>
-                        <h3>Google / Field agent</h3>
+                        <h3>{t("experience", "googleRole")}</h3>
                         <span>2013</span>
                     </div>
                     <ul className={styles.occupation__list}>
                         <li>
-                            A short-term project on collecting, processing, and analyzing information about local
-                            organizations and enterprises
+                            {t("experience", "googleProject")}
                         </li>
                     </ul>
                 </li>

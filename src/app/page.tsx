@@ -1,20 +1,20 @@
+"use client";
+
 import Skills from "../components/skills/skills";
 import ContactsForm from "../components/contacts-form/contacts-form";
 import Contacts from "../components/contacts/contacts";
+import { useTranslations } from "@/components/language/language-provider";
 
 function AboutMe() {
+    const t = useTranslations();
     return (
         <>
             <Skills />
             <div>
-                <p>
-                    Hi! I&apos;m a web developer who builds modern, fast, and user-friendly web applications. I value
-                    clean code, thoughtful architecture, and attention to detail. I&apos;m constantly learning new
-                    technologies and strive to create solutions that are both reliable and enjoyable to use.
-                </p>
+                <p>{t("about", "intro")}</p>
                 <br />
-                <p>Location: Sofia, Bulgaria</p>
-                <p>Languages: English - B2, Russian - native</p>
+                <p>{t("about", "location")}</p>
+                <p>{t("about", "languages")}</p>
             </div>
             <Contacts />
             <ContactsForm />

@@ -1,8 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import styles from "./person.module.scss";
 import Image from "next/image";
+import { useLanguage } from "@/components/language/language-provider";
 
 function Person() {
+    const { language } = useLanguage();
     return (
         <div className={styles.person}>
             <Image
@@ -14,7 +18,7 @@ function Person() {
                 className={styles.person__image}
             />
             <h1>Kseniia Savitskaia</h1>
-            <h2>Web developer</h2>
+            <h2>{language === "ru" ? "Веб-разработчик" : "Web developer"}</h2>
             <ul className={styles.person__socials}>
                 <li>
                     <Link href="https://www.linkedin.com/in/kseniia-savitskaia" target="_blank">
