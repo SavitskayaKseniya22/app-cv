@@ -6,10 +6,11 @@
 
     @include mx.media(tablet) {
         flex-direction: column;
-        flex: 0 0 15rem;
-        width: 15rem;
-        min-width: 15rem;
         height: 60%;
+    }
+
+    @include mx.media(laptop-m) {
+        min-width: 15rem;
     }
 
     @include mx.media(laptop-l) {

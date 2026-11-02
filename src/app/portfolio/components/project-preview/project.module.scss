@@ -3,15 +3,24 @@
 .project {
     padding: 0.5rem 1rem 0.5rem 0.5rem;
     background-color: #8080801a;
-
-    a {
-        flex-shrink: 0;
-    }
 }
 
 .project__main {
     position: relative;
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include mx.media(mobile) {
+        flex-direction: row;
+    }
+}
+
+.project__tags {
+    display: flex;
+    flex-shrink: 0;
     gap: 1rem;
     align-items: flex-start;
     justify-content: space-between;
@@ -22,7 +31,7 @@
     display: none;
     overflow: hidden;
 
-    @include mx.media(mobile) {
+    @include mx.media(laptop-s) {
         display: block;
         flex-shrink: 0;
         width: 7rem;

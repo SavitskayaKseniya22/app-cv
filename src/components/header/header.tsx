@@ -31,6 +31,17 @@ function Header() {
                 </li>
                 <li className={styles.header__item}>
                     <Link
+                        href="/occupations"
+                        title={t("navigation", "occupations")}
+                        className={clsx(styles.header__link, {
+                            [styles.header__link_active]: pathname === "/occupations",
+                        })}>
+                        <Icon icon={BriefcaseIcon} view={pathname === "/occupations" ? "accent" : "normal"} />
+                        <span className={styles.header__text}>{t("navigation", "occupations")}</span>
+                    </Link>
+                </li>
+                <li className={styles.header__item}>
+                    <Link
                         href="/portfolio"
                         title={t("navigation", "portfolio")}
                         className={clsx(styles.header__link, {
@@ -42,18 +53,6 @@ function Header() {
                 </li>
                 <li className={styles.header__item}>
                     <Link
-                        href="/occupations"
-                        title={t("navigation", "occupations")}
-                        className={clsx(styles.header__link, {
-                            [styles.header__link_active]: pathname === "/occupations",
-                        })}>
-                        <Icon icon={BriefcaseIcon} view={pathname === "/occupations" ? "accent" : "normal"} />
-                        <span className={styles.header__text}>{t("navigation", "occupations")}</span>
-                    </Link>
-                </li>
-
-                <li className={styles.header__item}>
-                    <Link
                         href="/CV_Savitskaia.pdf"
                         target="_blank"
                         download="CV_Savitskaia"
@@ -63,14 +62,17 @@ function Header() {
                         <span className={styles.header__text}>{t("navigation", "downloadCv")}</span>
                     </Link>
                 </li>
+
+                <li className={styles.header__item}>
+                    <button
+                        type="button"
+                        onClick={() => setLanguage(language === "ru" ? "en" : "ru")}
+                        aria-label={t("navigation", language === "ru" ? "switchToEnglish" : "switchToRussian")}
+                        aria-pressed={language === "ru"}>
+                        {language.toUpperCase()}
+                    </button>
+                </li>
             </ul>
-            <button
-                type="button"
-                onClick={() => setLanguage(language === "ru" ? "en" : "ru")}
-                aria-label={t("navigation", language === "ru" ? "switchToEnglish" : "switchToRussian")}
-                aria-pressed={language === "ru"}>
-                {language.toUpperCase()}
-            </button>
         </header>
     );
 }

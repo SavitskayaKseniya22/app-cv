@@ -17,12 +17,7 @@ function ProjectPreview({ data }: { data: ProjectType }) {
         <li className={styles.project}>
             <div className={styles.project__main}>
                 <div className={styles.project__preview}>
-                    <Image
-                        fill
-                        src={data.preview}
-                        alt={data.name}
-                        sizes="112px"
-                    />
+                    <Image fill src={data.preview} alt={data.name} sizes="112px" />
                 </div>
                 <div
                     className={styles.project__decription}
@@ -32,21 +27,23 @@ function ProjectPreview({ data }: { data: ProjectType }) {
                     <p>{projectText.description}</p>
                 </div>
 
-                <div className={styles.project__type} style={{ visibility: isLanguageReady ? "visible" : "hidden" }}>
-                    <p>{projectText.type.toUpperCase()}</p>
-                </div>
+                <div className={styles.project__tags}>
+                    <div
+                        className={styles.project__type}
+                        style={{ visibility: isLanguageReady ? "visible" : "hidden" }}>
+                        <p>{projectText.type.toUpperCase()}</p>
+                    </div>
 
-                {data.deploy && (
-                    <Link href={data.deploy} target="_blank" aria-label={`Open ${data.name}`}>
-                        <Icon icon={ArrowUpOnSquareStackIcon} size="large" />
-                    </Link>
-                )}
-                <GithubLink href={data.github} />
+                    {data.deploy && (
+                        <Link href={data.deploy} target="_blank" aria-label={`Open ${data.name}`}>
+                            <Icon icon={ArrowUpOnSquareStackIcon} size="large" />
+                        </Link>
+                    )}
+                    <GithubLink href={data.github} />
+                </div>
             </div>
             {data.instruments.length > 0 && (
-                <div
-                    className={styles.project__block}
-                    style={{ visibility: isLanguageReady ? "visible" : "hidden" }}>
+                <div className={styles.project__block} style={{ visibility: isLanguageReady ? "visible" : "hidden" }}>
                     <h4>{t("portfolio", "instruments")}</h4>
                     <ul className={styles.project__instruments}>
                         {data.instruments.map(instrument => (
@@ -57,9 +54,7 @@ function ProjectPreview({ data }: { data: ProjectType }) {
             )}
 
             {projectText.features && projectText.features.length > 0 && (
-                <div
-                    className={styles.project__block}
-                    style={{ visibility: isLanguageReady ? "visible" : "hidden" }}>
+                <div className={styles.project__block} style={{ visibility: isLanguageReady ? "visible" : "hidden" }}>
                     <h4>{t("portfolio", "features")}</h4>
                     <ul className={styles.project__features}>
                         {projectText.features.map(feature => (
