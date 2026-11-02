@@ -7,20 +7,6 @@ import Icon from "@/components/icon/icon";
 import { BriefcaseIcon } from "@heroicons/react/24/outline";
 import ProjectPreview from "./components/project-preview/project-preview";
 
-function isProject(value: unknown): value is ProjectType {
-    if (typeof value !== "object" || value === null) return false;
-    const project = value as Record<string, unknown>;
-    return (
-        ["name", "description", "deploy", "github", "preview"].every(key => typeof project[key] === "string") &&
-        Array.isArray(project.instruments) &&
-        project.instruments.every(instrument => typeof instrument === "string") &&
-        typeof project.complexity === "number" &&
-        typeof project.isItReady === "boolean" &&
-        (project.features === undefined ||
-            (Array.isArray(project.features) && project.features.every(feature => typeof feature === "string")))
-    );
-}
-
 function Portfolio() {
     const [portfolioData, setPortfolioData] = useState<ProjectType[]>([]);
 
@@ -34,9 +20,12 @@ function Portfolio() {
                 if (!resource.ok) throw new Error(`Failed to load projects: ${resource.status}`);
                 return resource.json();
             })
-            .then((data: unknown) => {
-                if (!Array.isArray(data) || !data.every(isProject)) throw new Error("Invalid projects data");
-                setPortfolioData(data);
+            .then(data => {
+                if (data satisfies ProjectType[]) {
+                    setPortfolioData((data as ProjectType[]).filter(items => items.isItReady));
+                } else {
+                    throw new Error("Invalid projects data");
+                }
             })
             .catch(error_ => {
                 if (controller.signal.aborted) return;
@@ -62,20 +51,11 @@ function Portfolio() {
     }
 
     return (
-        <>
-            <div className={styles.portfolio__header}>
-                <h2 className={styles["portfolio__chapter-title"]}>
-                    <Icon icon={BriefcaseIcon} />
-                    Learning projects
-                </h2>
-            </div>
-
-            <ul className={styles.portfolio__projects}>
-                {portfolioData.map(project => (
-                    <ProjectPreview key={`${project.name}-${project.github}`} data={project} />
-                ))}
-            </ul>
-        </>
+        <ul className={styles.portfolio__projects}>
+            {portfolioData.map(project => (
+                <ProjectPreview key={`${project.name}-${project.github}`} data={project} />
+            ))}
+        </ul>
     );
 }
 

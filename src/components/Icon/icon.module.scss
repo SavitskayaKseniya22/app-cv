@@ -3,6 +3,11 @@
 .icon {
     flex-shrink: 0;
 
+    &_large {
+        width: 32px;
+        height: 32px;
+    }
+
     &_big {
         width: 1.5rem;
         height: 1.5rem;

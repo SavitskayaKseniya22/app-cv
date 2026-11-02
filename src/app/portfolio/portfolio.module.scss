@@ -1,17 +1,5 @@
 @use "@abstracts/mixins" as mx;
 
-.portfolio__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.portfolio__chapter-title {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
 .portfolio__projects {
     display: flex;
     flex-direction: column;

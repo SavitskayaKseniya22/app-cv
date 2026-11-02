@@ -25,12 +25,17 @@ function ProjectPreview({ data }: { data: ProjectType }) {
                 </div>
                 <div className={styles.project__decription}>
                     <h3>{data.name}</h3>
+
                     <p>{data.description}</p>
+                </div>
+
+                <div className={styles.project__type}>
+                    <p>{data.type.toUpperCase()}</p>
                 </div>
 
                 {data.deploy && (
                     <Link href={data.deploy} target="_blank" aria-label={`Open ${data.name}`}>
-                        <Icon icon={ArrowUpOnSquareStackIcon} />
+                        <Icon icon={ArrowUpOnSquareStackIcon} size="large" />
                     </Link>
                 )}
                 <GithubLink href={data.github} />

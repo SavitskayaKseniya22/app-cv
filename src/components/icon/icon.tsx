@@ -4,7 +4,7 @@ import styles from "./icon.module.scss";
 
 type Properties = {
     icon: ComponentType<SVGProps<SVGSVGElement>>;
-    size?: "big" | "medium" | "small";
+    size?: "big" | "medium" | "small" | "large";
     view?: "accent" | "normal";
 };
 

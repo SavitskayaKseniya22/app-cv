@@ -34,6 +34,16 @@
     }
 }
 
+.project__type {
+    display: flex;
+    align-items: center;
+    max-width: 100px;
+    min-height: 32px;
+    text-align: right;
+
+    @include mx.text-s;
+}
+
 .project__decription {
     display: flex;
     flex-grow: 1;
