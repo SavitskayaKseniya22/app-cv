@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import emailjs from "@emailjs/browser";
 import styles from "./form.module.scss";
 import { useLanguage, useTranslations } from "@/components/language/language-provider";
 
@@ -18,6 +17,7 @@ type Inputs = {
 
 function ContactsForm() {
     const t = useTranslations();
+    const { isLanguageReady } = useLanguage();
     const {
         register,
         handleSubmit,
@@ -40,28 +40,30 @@ function ContactsForm() {
         };
     }, [status]);
 
-    const onSubmit: SubmitHandler<Inputs> = values => {
+    const onSubmit: SubmitHandler<Inputs> = async values => {
         setStatus(null);
         setIsSending(true);
-        emailjs
-            .send(emailServiceId, emailTemplateId, values, {
+        try {
+            const emailjs = await import("@emailjs/browser");
+            await emailjs.send(emailServiceId, emailTemplateId, values, {
                 publicKey: emailPublicKey,
-            })
-            .then(() => {
-                reset();
-                setStatus("sent");
-            })
-            .catch(error => {
-                console.error("EmailJS error:", error);
-                setStatus("error");
-            })
-            .finally(() => {
-                setIsSending(false);
             });
+            reset();
+            setStatus("sent");
+        } catch (error) {
+            console.error("EmailJS error:", error);
+            setStatus("error");
+        } finally {
+            setIsSending(false);
+        }
     };
 
     return (
-        <form noValidate onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+        <form
+            noValidate
+            onSubmit={handleSubmit(onSubmit)}
+            className={styles.form}
+            style={{ visibility: isLanguageReady ? "visible" : "hidden" }}>
             <input
                 type="text"
                 {...register("from_name", {

@@ -5,11 +5,15 @@ import { translations } from "@/i18n";
 import type { TranslationKey, TranslationSection } from "@/i18n";
 
 export type Language = "en" | "ru";
-const LanguageContext = createContext<{ language: Language; setLanguage: (language: Language) => void } | null>(null);
+const LanguageContext = createContext<{
+    language: Language;
+    setLanguage: (language: Language) => void;
+    isLanguageReady: boolean;
+} | null>(null);
 const LANGUAGE_CHANGE_EVENT = "language-change";
 
 function getLanguageSnapshot(): Language | null {
-    if (globalThis.window === undefined) return null;
+    if (globalThis.document === undefined) return null;
 
     try {
         const saved = globalThis.localStorage.getItem("language");
@@ -52,8 +56,9 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }, [language]);
 
     return (
-        <LanguageContext.Provider value={{ language, setLanguage: setCurrentLanguage }}>
-            <div style={{ display: "contents", visibility: savedLanguage ? "visible" : "hidden" }}>{children}</div>
+        <LanguageContext.Provider
+            value={{ language, setLanguage: setCurrentLanguage, isLanguageReady: savedLanguage !== null }}>
+            {children}
         </LanguageContext.Provider>
     );
 }

@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useLanguage } from "@/components/language/language-provider";
 
 function Person() {
-    const { language } = useLanguage();
+    const { language, isLanguageReady } = useLanguage();
     return (
         <div className={styles.person}>
             <Image
@@ -14,11 +14,15 @@ function Person() {
                 alt="Background image"
                 fill
                 priority
-                sizes="100vw"
+                fetchPriority="high"
+                quality={60}
+                sizes="(min-width: 768px) 220px, 100vw"
                 className={styles.person__image}
             />
             <h1>Kseniia Savitskaia</h1>
-            <h2>{language === "ru" ? "Веб-разработчик" : "Web developer"}</h2>
+            <h2 style={{ visibility: isLanguageReady ? "visible" : "hidden" }}>
+                {language === "ru" ? "Веб-разработчик" : "Web developer"}
+            </h2>
             <ul className={styles.person__socials}>
                 <li>
                     <Link href="https://www.linkedin.com/in/kseniia-savitskaia" target="_blank">

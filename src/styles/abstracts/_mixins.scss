@@ -4,28 +4,28 @@
 // font-family
 
 @mixin font-jura-400 {
-    font-family: Jura, sans-serif;
+    font-family: var(--font-jura), sans-serif;
     font-style: normal;
     font-weight: 400;
     font-optical-sizing: auto;
 }
 
 @mixin font-jura-500 {
-    font-family: Jura, sans-serif;
+    font-family: var(--font-jura), sans-serif;
     font-style: normal;
     font-weight: 500;
     font-optical-sizing: auto;
 }
 
 @mixin font-jura-600 {
-    font-family: Jura, sans-serif;
+    font-family: var(--font-jura), sans-serif;
     font-style: normal;
     font-weight: 600;
     font-optical-sizing: auto;
 }
 
 @mixin font-jura-700 {
-    font-family: Jura, sans-serif;
+    font-family: var(--font-jura), sans-serif;
     font-style: normal;
     font-weight: 700;
     font-optical-sizing: auto;

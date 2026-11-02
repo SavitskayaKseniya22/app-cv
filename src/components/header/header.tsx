@@ -10,12 +10,12 @@ import { useLanguage, useTranslations } from "@/components/language/language-pro
 
 function Header() {
     const pathname = usePathname();
-    const { language, setLanguage } = useLanguage();
+    const { language, setLanguage, isLanguageReady } = useLanguage();
     const t = useTranslations();
     const isPortfolio = pathname === "/portfolio" || pathname.startsWith("/portfolio/");
 
     return (
-        <header className={styles.header}>
+        <header className={styles.header} style={{ visibility: isLanguageReady ? "visible" : "hidden" }}>
             <ul className={styles.header__nav}>
                 <li className={styles.header__item}>
                     <Link

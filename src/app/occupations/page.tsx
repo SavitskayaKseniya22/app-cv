@@ -5,12 +5,13 @@ import Image from "next/image";
 import { AcademicCapIcon, BriefcaseIcon } from "@heroicons/react/24/outline";
 import styles from "./occupations.module.scss";
 import Icon from "@/components/icon/icon";
-import { useTranslations } from "@/components/language/language-provider";
+import { useLanguage, useTranslations } from "@/components/language/language-provider";
 
 function Occupation() {
     const t = useTranslations();
+    const { isLanguageReady } = useLanguage();
     return (
-        <>
+        <div style={{ visibility: isLanguageReady ? "visible" : "hidden" }}>
             <h2 className={styles["occupation__chapter-title"]}>
                 <Icon icon={BriefcaseIcon} />
                 {t("experience", "related")}
@@ -167,7 +168,7 @@ function Occupation() {
                     </ul>
                 </li>
             </ul>
-        </>
+        </div>
     );
 }
 

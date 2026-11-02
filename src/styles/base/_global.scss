@@ -1,6 +1,5 @@
 @use "@abstracts/variables" as vars;
 @use "@abstracts/mixins" as mx;
-@import "https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap";
 
 html {
     @include mx.text-m;

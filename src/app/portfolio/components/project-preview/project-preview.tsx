@@ -1,4 +1,6 @@
-import { ProjectType } from "@/app/interfaces";
+"use client";
+
+import type { ProjectType } from "@/app/interfaces";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./project.module.scss";
@@ -7,10 +9,8 @@ import Icon from "@/components/icon/icon";
 import { ArrowUpOnSquareStackIcon } from "@heroicons/react/24/outline";
 import { useLanguage, useTranslations } from "@/components/language/language-provider";
 
-const imageLoader = ({ src }: { src: string }) => src;
-
 function ProjectPreview({ data }: { data: ProjectType }) {
-    const { language } = useLanguage();
+    const { language, isLanguageReady } = useLanguage();
     const t = useTranslations();
     const projectText = data.translations[language];
     return (
@@ -20,20 +20,19 @@ function ProjectPreview({ data }: { data: ProjectType }) {
                     <Image
                         fill
                         src={data.preview}
-                        loader={imageLoader}
                         alt={data.name}
-                        unoptimized
-                        placeholder="blur"
-                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8pqT0HwAFCwIbEaevOQAAAABJRU5ErkJggg=="
+                        sizes="112px"
                     />
                 </div>
-                <div className={styles.project__decription}>
+                <div
+                    className={styles.project__decription}
+                    style={{ visibility: isLanguageReady ? "visible" : "hidden" }}>
                     <h3>{data.name}</h3>
 
                     <p>{projectText.description}</p>
                 </div>
 
-                <div className={styles.project__type}>
+                <div className={styles.project__type} style={{ visibility: isLanguageReady ? "visible" : "hidden" }}>
                     <p>{projectText.type.toUpperCase()}</p>
                 </div>
 
@@ -45,7 +44,9 @@ function ProjectPreview({ data }: { data: ProjectType }) {
                 <GithubLink href={data.github} />
             </div>
             {data.instruments.length > 0 && (
-                <div className={styles.project__block}>
+                <div
+                    className={styles.project__block}
+                    style={{ visibility: isLanguageReady ? "visible" : "hidden" }}>
                     <h4>{t("portfolio", "instruments")}</h4>
                     <ul className={styles.project__instruments}>
                         {data.instruments.map(instrument => (
@@ -56,7 +57,9 @@ function ProjectPreview({ data }: { data: ProjectType }) {
             )}
 
             {projectText.features && projectText.features.length > 0 && (
-                <div className={styles.project__block}>
+                <div
+                    className={styles.project__block}
+                    style={{ visibility: isLanguageReady ? "visible" : "hidden" }}>
                     <h4>{t("portfolio", "features")}</h4>
                     <ul className={styles.project__features}>
                         {projectText.features.map(feature => (

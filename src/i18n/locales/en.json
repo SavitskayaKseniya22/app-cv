@@ -4,8 +4,8 @@
         "portfolio": "Portfolio",
         "occupations": "Occupations",
         "downloadCv": "Get CV",
-        "switchToEnglish": "Switch language to English",
-        "switchToRussian": "Switch language to Russian"
+        "switchToEnglish": "RU. Switch language to English",
+        "switchToRussian": "EN. Switch language to Russian"
     },
     "about": {
         "intro": "Hi! I'm a web developer who builds modern, fast, and user-friendly web applications. I value clean code, thoughtful architecture, and attention to detail. I'm constantly learning new technologies and strive to create solutions that are both reliable and enjoyable to use.",
