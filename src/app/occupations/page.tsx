@@ -15,7 +15,7 @@ function Occupation() {
                 <li className={styles.occupation__item}>
                     <Link href="https://creos.me/" target="_blank" className={styles.occupation__summary}>
                         <h3>CREOS Play / Fronted-developer</h3>
-                        <span>07/2024-07/2026</span>
+                        <span>07/2024-03/2026</span>
                     </Link>
                     <ul className={styles.occupation__list}>
                         <li>
