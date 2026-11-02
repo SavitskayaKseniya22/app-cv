@@ -56,4 +56,10 @@ npm run dev
 
 ### Screenshots
 
+<img width="1920" height="955" alt="Screenshot 2026-10-05 at 22-17-09 CV" src="https://github.com/user-attachments/assets/1002b06e-0a6c-4b63-a1a8-53d11030f88a" />
+<img width="1920" height="955" alt="Screenshot 2026-10-05 at 22-17-24 CV" src="https://github.com/user-attachments/assets/14b8d7ea-5ebc-4e79-8f0a-c3d4525ea24e" />
+<img width="1920" height="955" alt="Screenshot 2026-10-05 at 22-17-14 CV" src="https://github.com/user-attachments/assets/c051ffc5-9924-4cb7-addd-1d7edc870e6b" />
+
+
+
 
