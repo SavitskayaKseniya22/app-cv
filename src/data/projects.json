@@ -390,8 +390,8 @@
     },
     {
         "name": "Technomart",
-        "deploy": "https://technomart-omega.vercel.app/",
-        "github": "https://github.com/SavitskayaKseniya22/Technomart",
+        "deploy": "https://landing-page-technomart.netlify.app/",
+        "github": "https://github.com/SavitskayaKseniya22/landing-page-technomart",
         "instruments": ["eslint", "prettier", "sass", "typescript", "webpack", "normalize.css"],
         "preview": "/portfolio-images/technomart/preview.png",
         "isItReady": true,
