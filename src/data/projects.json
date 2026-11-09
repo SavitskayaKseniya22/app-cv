@@ -263,8 +263,8 @@
     },
     {
         "name": "Logi mouse",
-        "deploy": "https://logi-mouse.vercel.app",
-        "github": "https://github.com/SavitskayaKseniya22/Logi_mouse",
+        "deploy": "https://landing-page-logi-mouse.netlify.app/",
+        "github": "https://github.com/SavitskayaKseniya22/landing-page-logi-mouse",
         "preview": "/portfolio-images/logi-mouse/preview.png",
         "instruments": ["javascript", "bootstrap-carousel", "eslint", "prettier", "sass", "webpack", "normalize.css"],
         "isItReady": true,
