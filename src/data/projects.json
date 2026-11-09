@@ -225,8 +225,8 @@
     {
         "name": "Momentum",
         "task": "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/momentum/momentum.md",
-        "deploy": "https://illustrious-dusk-12045b.netlify.app/",
-        "github": "https://github.com/SavitskayaKseniya22/momentum",
+        "deploy": "https://app-momentum-with-widgets.netlify.app/",
+        "github": "https://github.com/SavitskayaKseniya22/app-momentum",
         "instruments": ["typescript", "sass", "eslint", "prettier", "boxicons", "normalize.css", "i18next", "netlify"],
         "preview": "/portfolio-images/momentum/preview.png",
         "isItReady": true,
