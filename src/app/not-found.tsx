@@ -1,6 +1,6 @@
 "use client";
 
-import Icon from "@/components/icon/icon";
+import { Icon } from "@/shared/ui/icon";
 import ArrowUturnLeftIcon from "@heroicons/react/24/outline/ArrowUturnLeftIcon";
 import { useRouter } from "next/navigation";
 
