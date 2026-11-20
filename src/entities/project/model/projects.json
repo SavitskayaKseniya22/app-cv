@@ -294,7 +294,7 @@
     {
         "name": "Shelter",
         "task": "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/shelter/shelter.md",
-        "deploy": "https://shelter-lemon.vercel.app/",
+        "deploy": "https://landing-page-shelter.netlify.app/",
         "github": "https://github.com/SavitskayaKseniya22/landing-page-shelter",
         "instruments": ["typescript", "react", "react-router", "vite", "scss"],
         "preview": "/portfolio-images/shelter/preview.png",
@@ -325,7 +325,7 @@
     {
         "name": "Museum",
         "task": "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/museum/museum.md",
-        "deploy": "https://museum-liart.vercel.app/",
+        "deploy": "https://landing-page-museum.netlify.app/",
         "github": "https://github.com/SavitskayaKseniya22/museum",
         "instruments": ["typescript", "react", "react-router", "vite", "scss", "react-hook-form", "react-redux"],
         "preview": "/portfolio-images/museum/preview.png",
