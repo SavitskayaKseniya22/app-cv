@@ -26,35 +26,6 @@ Personal CV and portfolio website for Kseniia Savitskaia, a web developer.
 - Prettier
 - Netlify
 
-## Architecture
-
-The source follows Feature-Sliced Design. The pages layer is named `views`
-because Next.js reserves `src/pages` for its Pages Router.
-
-```text
-src/
-  app/                       Next.js routes, root layout and API handlers
-  views/                     Page composition: about, occupations, portfolio
-  widgets/header/            Navigation header
-  features/
-    send-message/            Contact form and email submission
-    switch-language/         Language switcher
-  entities/
-    profile/                 Person, skills and contact information
-    project/                 Project data, types and preview components
-  shared/
-    lib/i18n/                Dictionaries, language context and hooks
-    ui/icon/                 Reusable icon component
-    styles/                  Global styles, Sass variables and mixins
-```
-
-Dependencies flow down from `app` to `shared`. Slices expose public APIs through
-`index.ts`; imports within a slice use relative paths. ESLint checks alias imports
-for layer direction, sibling-slice dependencies and access to internal modules.
-Use `@/` for source imports and `@abstracts/` for shared Sass helpers.
-
-Project content lives in `src/entities/project/model/projects.json`. Both the
-portfolio and `/api/projects` use the same typed data module.
 
 ## Development
 
